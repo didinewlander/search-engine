@@ -12,7 +12,7 @@ function Results() {
   
     useEffect(() => {
       setIsLoading(true); // Start loading
-      fetch(`http://localhost:4000/search/${state.query}`)
+      fetch(`/search/${state.query}`)
         .then(response => response.json())
         .then(data => {
           setResults(data);

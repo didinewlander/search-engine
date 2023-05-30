@@ -15,4 +15,7 @@ dbConfig(dbURI);
 app.use(express.urlencoded({ extended: true }));
 app.use('/search', searchRoute);
 
-app.listen(4000, () => console.log('listening on port 4000'));
+const port = process.env.PORT || 5500;
+
+// Listen on `port` and 0.0.0.0
+app.listen(port, "0.0.0.0", () => console.log(`${port} is listened`));
