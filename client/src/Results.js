@@ -12,7 +12,7 @@ function Results() {
   
     useEffect(() => {
       setIsLoading(true); // Start loading
-      fetch(`/search/${state.query}`)
+      fetch(`https://search-engine-production-eb2d.up.railway.app/search/${state.query}`)
         .then(response => response.json())
         .then(data => {
           setResults(data);
