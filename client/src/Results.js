@@ -12,7 +12,7 @@ function Results() {
   
     useEffect(() => {
       setIsLoading(true); // Start loading
-      fetch(`http://localhost:process.env.PORT/search/${state.query}`)
+      fetch(`/search/${state.query}`)
         .then(response => response.json())
         .then(data => {
           setResults(data);
